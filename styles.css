@@ -1,0 +1,166 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+* {
+    box-sizing: inherit; /* Assure que tous les éléments utilisent la même boîte de dimensionnement */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    min-width: 100px; /* Définir une largeur minimale pour les éléments de la liste */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #FF7828;
+    padding: 15px;
+    border-radius: 1em; 
+}
+
+nav ul li a.active {
+    background-color: #FF7828;
+    padding: 15px;
+    border-radius: 1em; 
+}
+
+.hero {
+    display: flex;
+    overflow: hidden; /* Empêche le débordement de contenu */
+    align-items: center;
+    padding-left: 2em;
+    height: 500px; /* Ajoute de la hauteur à la section */
+    background-color: #CFCFCF;
+}
+
+.text-content {
+    flex: 1; /* Prend autant d'espace que possible */
+    padding: 2em; /* Ajustez selon vos besoins */
+}
+
+.hero_image_container {
+    position: relative;
+}
+
+.hero_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Assure que l'image couvre toute la largeur */
+    height: 100%; /* Assure que l'image couvre toute la hauteur */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur, en conservant les proportions */
+}
+
+.hero_image {
+    position: relative; /* Ajoute une position relative pour pouvoir positionner le pseudo-élément */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'arrière-plan */
+    background-attachment: fixed; /* Fixe l'image de fond par rapport à la fenêtre du navigateur */
+}
+
+.hero .text-content .buttons {
+    display: flex;
+    gap: 1em; /* Augmente l'espacement entre les boutons */
+}
+
+.cards {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5em; /* Augmente l'espacement entre les cartes */
+    padding: 2em;
+    width: 100%; /* Assure que la section des cartes ne dépasse pas la largeur de l'écran */
+    justify-content: center; /* Centre la grille horizontalement */
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-product {
+    height: 200px; /* Définir une hauteur fixe */
+    overflow: hidden; /* Masquer toute partie de l'image qui dépasse */
+}
+
+.image-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur, en conservant les proportions */
+}
+
+.content {
+    padding: 1.5em;  /*à l'intérieur de la carte*/
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0;
+}
+
+.btn-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.button_card {
+    background-color: #333;
+    border: #333 1px solid;
+    border-radius: 1em;
+    color: #ccc;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.btn-card .button_card:hover {
+    background-color: #FF7828;
+    color: #fff;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5em; /* Augmente le padding */
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%; /* Assure que le footer ne dépasse pas la largeur de l'écran */
+}
